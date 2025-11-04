@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="formwrapper active">
+    <h2>Enter Your Details</h2>
+    <div class="input-group">
+      <input type="text" id="inp_name" placeholder="Enter Name" />
+      <input type="email" id="inp_email" placeholder="Enter Email" />
+      <input type="text" id="inp_roll" placeholder="Enter Roll No" />
+      <input type="text" id="inp_inst" placeholder="Enter Institute" />
+    </div>
+    <button onclick="startQuiz()">Start Quiz</button>
+  </section>
+
+  <section class="start">
+    <h2>Welcome <span id="para-name"></span>!</h2>
+    <p>Email: <span id="para-email"></span></p>
+    <p>Roll: <span id="para-roll"></span></p>
+    <p>Total Questions: <span class="ttlq"></span></p>
+    <button class="btn2">Start Now</button>
+  </section>
+
+  <section class="quizbody">
+    <h2>Question <span class="numb"></span>:</h2>
+    <h3 id="ques"></h3>
+    <ul id="opt">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button class="btn3" onclick="nextQuestion()">Next</button>
+  </section>
+
+  <section class="result">
+    <h2>Quiz Result</h2>
+    <div class="result-info">
+      <p><b>Name:</b> <span id="res-name"></span></p>
+      <p><b>Email:</b> <span id="res-email"></span></p>
+      <p><b>Roll No:</b> <span id="res-roll"></span></p>
+      <p><b>Institute:</b> <span id="res-inst"></span></p>
+    </div>
+    <p><b>Total:</b> <span id="ttl"></span></p>
+    <p><b>Right:</b> <span id="ra"></span></p>
+    <p><b>Wrong:</b> <span id="wa"></span></p>
+    <h2 class="percent">Your Percentage: <span id="perc"></span>%</h2>
+    <p class="define"></p>
+    <button onclick="location.reload()">Restart Quiz</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
